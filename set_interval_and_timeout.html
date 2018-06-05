@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScriptの練習</title>
+</head>
+<body>
+<script>
+    /*
+        タイマー処理
+            setInterval // 非同期
+            setTimeout // 同期
+    */
+    var i = 0;
+//    function  show() {
+//        console.log(i++);
+//    }
+//    setInterval(function () {
+//        show();
+//    }, 1000)
+
+    function show(){
+        console.log(i++);
+        var tid = setTimeout(function(){
+            show()
+        },1000);
+
+        if (i > 3){
+            clearInterval(tid);
+        }
+    }
+
+    show()
+
+</script>
+</body>
+</html>
