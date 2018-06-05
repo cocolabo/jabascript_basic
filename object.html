@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScriptの練習</title>
+</head>
+<body>
+<script>
+    /*
+        オブジェクト
+            名前と値
+    */
+    var user = {
+        email:"cocomaru@example.com", //プロパティ
+        score: 80,
+
+        greet : function(name){ // メソッド
+            console.log("hello " + name + " from " + this.email)
+        }
+    };
+
+    console.log(user.email, user.score);
+    user.score = 100;
+    console.log(user.email, user.score);
+
+
+    user.greet("cocomaru")
+
+
+</script>
+</body>
+</html>
